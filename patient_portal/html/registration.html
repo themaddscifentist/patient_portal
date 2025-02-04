@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Register for Patient Portal</h2>
+            <form id="registration-form" action="Registration.php" method="POST">
+                <!-- Full Name Field -->
+                <div class="textbox">
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="textbox">
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                </div>
+
+                <!-- Email Field -->
+                <div class="textbox">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Password Field -->
+                <div class="textbox">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Confirm Password Field -->
+                <div class="textbox">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Register</button>
+            </form>
+
+            <!-- Login Link -->
+            <p>Already have an account? <a href="login.php">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const firstname = document.getElementById('first-name').value;
+            const lastname = document.getElementById('last-name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            fetch('Registration.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ first_name, last_name, email, password })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Registration successful!');
+                        window.location.href = 'login.php'; // Redirect to login page
+                    } else {
+                        alert('Registration failed. Please try again.');
+                    }
+                })
+                .catch(err => console.error('Error:', err));
+        });
+    </script>
+</body>
+</html>

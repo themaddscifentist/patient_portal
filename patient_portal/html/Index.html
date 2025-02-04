@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="appointments.php">Appointments</a></li>
+            <li><a href="scheduling.php">Schedule</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="logout.php"</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page Content -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome, <?php echo htmlspecialchars($user['name']); ?>!</h1>
+            <p>Manage your medical appointments, schedule visits, and view your profile with ease.</p>
+            <a href="scheduling.php" class="btn schedule-btn">Schedule an Appointment</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature">
+            <a href="appointments.php">
+                <i class="fas fa-calendar-check"></i>
+                <h2>Upcoming Appointments</h2>
+                <p>Keep track of your upcoming appointments and past visits.</p>
+        </div>
+        <div class="feature">
+            <a href="profile.php">
+                <i class="fas fa-user-circle"></i>
+                <h2>Patient Profile</h2>
+                <p>Update your contact details and manage your medical records.</p>
+        </div>
+        <div class="feature">
+            <a href="scheduling.php">
+                <i class="fas fa-hospital"></i>
+                <h2>Easy Scheduling</h2>
+                <p>Book appointments with just a few clicks.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Healthcare Patient Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

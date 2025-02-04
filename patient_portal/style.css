@@ -1,0 +1,124 @@
+﻿/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+    .navbar li {
+        margin: 0 15px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+        .navbar a:hover {
+            color: #f4f4f4;
+        }
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    color: white;
+    background: url('images/healthcare.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+}
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero .btn {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease;
+    }
+
+        .hero .btn:hover {
+            background-color: #0056b3;
+        }
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+    .feature:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature i {
+        font-size: 3rem;
+        color: #007BFF;
+        margin-bottom: 10px;
+    }
+
+    .feature h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .feature p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}

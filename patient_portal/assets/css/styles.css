@@ -1,0 +1,413 @@
+﻿/* General Reset and Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+    .navbar li {
+        margin: 0 15px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+        .navbar a:hover {
+            color: #f4f4f4;
+        }
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/doctor.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 22%; /* Move text down from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    text-align: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    padding: 20px;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Ensure proper stacking */
+    z-index: 1; /* Ensure hover works on top of other elements */
+}
+
+    .feature:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature i {
+        font-size: 3rem;
+        color: #007BFF;
+        margin-bottom: 15px;
+    }
+
+    .feature h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .feature p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Buttons */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        max-width: 350px;
+    }
+}
+
+/* Hero Content for Home Page */
+.hero-content {
+    position: absolute;
+    top: 22%; /* Move text down from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* General Body Styling for sections */
+section {
+    padding: 20px;
+}
+
+h2, h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Login Page Styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4f94d7, #003f63); /* Gradient background */
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+    .login-box h2 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        color: #333;
+        font-weight: bold;
+    }
+
+.textbox {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+}
+
+    .textbox input {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .textbox input:focus {
+            border-color: #007BFF;
+            background-color: #e7f1ff;
+            outline: none;
+        }
+
+.btn {
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+..schedule-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFEB3B; /* Yellow color */
+    color: black; /* Text color */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #FFEB3B;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-btn:hover {
+    background-color: #FBC02D; /* Darker yellow on hover */
+}
+
+.no-appointments-message {
+    text-align: center;
+    font-size: 18px; /* Adjust the size if needed */
+    color: #555; /* Adjust the color if needed */
+    margin-top: 20px;
+}
+
+
+/* Links Styling */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    margin-top: 15px;
+}
+
+    a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.appointment-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .appointment-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .appointment-form input, .appointment-form select, .appointment-form textarea, .appointment-form button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .appointment-form button {
+        background: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+        .appointment-form button:hover {
+            background: #0056b3;
+        }
+
+ .appointments_list h2 {
+            text-align:center;
+            border: black;
+            padding: 10x;
+            position: center;
+        }
+
+.appointments-list h2 {
+    text-align: center;
+}
+.appointments-list {
+    text-align: center; /* Centers the content horizontally */
+    margin-top: 20px;
+}
+
+    .appointments-list table {
+        margin: 0 auto; /* Centers the table */
+        border-collapse: collapse;
+        width: 80%; /* Adjust table width as needed */
+    }
+
+    .appointments-list th, .appointments-list td {
+        padding: 10px;
+        text-align: center; /* Center-aligns the table content */
+        border: 1px solid #ddd; /* Adds border to table cells */
+    }
+
+    .appointments-list th {
+        background-color: #f2f2f2;
+    }
+
+    .appointments-list a {
+        color: #007BFF; /* Color for the delete link */
+        text-decoration: none;
+    }
+
+        .appointments-list a:hover {
+            text-decoration: underline;
+        }
+.profile-info {
+    text-align: center; /*centers profile info*/
+    margin-top: 40px; /* gives space from top */
+}
+
+.profile-field {
+    margin-bottom: 15px; /* Adds space between fields */
+    text-align: left; 
+    display: inline-block;
+    width: 100%;
+    max-width: 500px; 
+}
+
+    .profile-field label {
+        display: block; 
+        margin-bottom: 5px;
+    }
+
+    .profile-field input {
+        width: 100%; /* Makes the input fill the width of the container */
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+form {
+    display: block;
+    margin: 0 auto; /* Centers the form */
+    max-width: 600px; /* Adjust form width to a desired max */
+}
+
+
+ 

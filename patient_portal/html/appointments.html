@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Patient Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="appointments.php">Appointments</a></li>
+            <li><a href="scheduling.php">Schedule</a></li>
+            <li><a href="profile.php">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Appointments Page Content -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Your Upcoming Appointments</h1>
+            <p>Here you can manage and view your scheduled appointments.</p>
+            <a href="schedule.php" class="btn schedule-btn">Schedule New Appointment</a>
+        </div>
+    </header>
+
+    <!-- Appointments List -->
+    <section class="appointments-list">
+        <h2>Upcoming Appointments</h2>
+        <div id="appointments-container">
+            <!-- Appointments will be displayed here from appointments.php -->
+            <p>Loading your appointments...</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Healthcare Patient Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

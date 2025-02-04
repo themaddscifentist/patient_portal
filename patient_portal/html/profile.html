@@ -1,0 +1,57 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="appointments.php">Appointments</a></li>
+            <li><a href="scheduling.php">Schedule</a></li>
+            <li><a href="profile.php">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profile Page Content -->
+    <header class="profile-header">
+        <div class="profile-content">
+            <h1>Welcome, <?php echo htmlspecialchars($user['email']); ?>!</h1>
+            <p>View and update your personal profile information below.</p>
+        </div>
+    </header>
+
+    <section class="profile-info">
+        <h2>Your Information</h2>
+        <form action="update_profile.php" method="POST">
+            <div class="profile-field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" readonly>
+            </div>
+
+            <div class="profile-field">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" value="<?php echo htmlspecialchars($user['phone']); ?>">
+            </div>
+
+            <div class="profile-field">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" value="<?php echo htmlspecialchars($user['address']); ?>">
+            </div>
+
+            <button type="submit" class="btn">Update Profile</button>
+        </form>
+    </section>
+
+    <!-- Logout Button -->
+    <footer>
+        <a href="logout.php" class="btn logout-btn">Logout</a>
+    </footer>
+
+</body>
+</html>
