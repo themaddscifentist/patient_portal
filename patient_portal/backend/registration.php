@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_connection.php');
+include('../backend/db_connection.php');
 
 // Initialize messages
 $error_message = "";
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($insert_stmt = $conn->prepare($insert_sql)) {
                     $insert_stmt->bind_param("ssssss", $first_name, $last_name, $email, $phone, $address, $hashed_password);
                     if ($insert_stmt->execute()) {
-                        $success_message = "Registration successful! <a href='login.php'>Login here</a>.";
+                        $success_message = "Registration successful! <a href='../backend/login.php'>Login here</a>.";
                     } else {
                         $error_message = "Error registering user. Please try again.";
                     }
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <button type="submit" class="btn">Register</button>
             </form>
-            <p>Already have an account? <a href="login.php">Login here</a></p>
+            <p>Already have an account? <a href="../backend/login.php">Login here</a></p>
         </div>
     </div>
 </body>
