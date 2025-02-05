@@ -3,12 +3,12 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ../backend/login.php");
     exit();
 }
 
 // Include the database connection
-include('db_connection.php');
+include('../backend/db_connection.php');
 
 // Fetch the user's information from the database
 $user_id = intval($_SESSION['user_id']);
@@ -65,15 +65,15 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
     <nav>
         <ul class="navbar">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="appointments.php">Appointments</a></li>
-            <li><a href="scheduling.php">Schedule</a></li>
-            <li><a href="profile.php">Profile</a></li>
+            <li><a href="../public/index.php">Home</a></li>
+            <li><a href="../public/appointments.php">Appointments</a></li>
+            <li><a href="../public/scheduling.php">Schedule</a></li>
+            <li><a href="../public/profile.php">Profile</a></li>
         </ul>
     </nav>
 
@@ -86,7 +86,7 @@ $conn->close();
 
     <section class="profile-info">
         <h2>Your Information</h2>
-        <form action="update_profile.php" method="POST">
+        <form action="..public/update_profile.php" method="POST">
             <div class="profile-field">
                 <label for="phone">Phone Number:</label>
                 <input type="text" id="phone" name="phone" value="<?php echo htmlspecialchars($user['phone'] ?? ''); ?>" required>
@@ -107,7 +107,7 @@ $conn->close();
     </section>
 
     <footer>
-        <a href="logout.php" class="btn logout-btn">Logout</a>
+        <a href="../backend/logout.php" class="btn logout-btn">Logout</a>
     </footer>
 </body>
 </html>
