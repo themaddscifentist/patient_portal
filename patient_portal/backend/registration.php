@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php if ($error_message) echo "<p class='error'>$error_message</p>"; ?>
             <?php if ($success_message) echo "<p class='success'>$success_message</p>"; ?>
 
-            <form id="registration-form" action="registration.php" method="POST">
+            <form id="registration-form" action="../backend/registration.php" method="POST">
                 <div class="textbox">
                     <input type="text" name="first_name" placeholder="First Name" required>
                 </div>
