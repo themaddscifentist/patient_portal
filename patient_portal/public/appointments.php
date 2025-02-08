@@ -35,6 +35,7 @@ $result = $stmt->get_result();
             <li><a href="../public/appointments.php">Appointments</a></li>
             <li><a href="../public/Scheduling.php">Schedule</a></li>
             <li><a href="../public/profile.php">Profile</a></li>
+            <li><a href="../backend/logout.php">Logout</a></li>  
         </ul>
     </nav>
 
