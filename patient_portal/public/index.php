@@ -74,6 +74,7 @@ $user = $result->fetch_assoc();
 
     <!-- Footer -->
     <footer>
+         <a href="../backend/logout.php" class="btn logout-btn">Logout</a>
         <p>&copy; 2025 Healthcare Patient Portal. All rights reserved.</p>
     </footer>
 </body>
